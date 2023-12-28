@@ -47,13 +47,13 @@ $data = @(
         "Property" = "Accessed URLs"
         "Value" = ($url_count.GetEnumerator() | ForEach-Object {
                     "URL: $($_.Key), Hit-Count: $($_.Value)"
-                }) -join "`n`r`n"
+                }) -join "`n`r"
     },
     [PSCustomObject]@{
         "Property" = "Response Codes"
         "Value"    = ($response_codes.GetEnumerator() | ForEach-Object {
                         "Response Code: $($_.Key), Count: $($_.Value)"
-                   }) -join "`n`r`n"
+                 }) -join "`r"
      }
 )
 
